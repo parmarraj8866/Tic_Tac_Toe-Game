@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #c3aed6, #f3e7e9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: #ffffffcc;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #5e2b97;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px);
+    gap: 15px;
+    justify-content: center;
+}
+
+.cell {
+    background-color: #fdfbff;
+    border: 2px solid #caa8f5;
+    border-radius: 12px;
+    font-size: 4rem;
+    color: #5e2b97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+    background-color: #ede2ff;
+    transform: scale(1.05);
+}
+
+.cell:active {
+    transform: scale(0.96);
+    background-color: #e1d0ff;
+}
+
+.winner {
+    width: 30%;
+    background-color: #ffffffcc;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+}
+
+.playagain {
+    padding: 15px 20px;
+    background-color: #5e2b97;
+    border: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+}
+
+.playagain:hover {
+    transform: scale(1.05);
+}
+
+.playagain:active {
+    transform: scale(0.96);
+}
+
+
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .playagain {
+        font-size: 18px;
+    }
+
+    .winner {
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+    .board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+
+    .cell {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .playagain {
+        font-size: 16px;
+    }
+
+    .winner {
+        width: 90%;
+    }
+}
